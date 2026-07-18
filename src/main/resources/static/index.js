@@ -5,13 +5,13 @@ var user=[
     {
         "name":"John doe",
         "gender":"Male",
-        "img":"john.jpg"
+        "img":"john.png"
 
     },
     {
     "name":"Jane doe",
         "gender":"Female",
-        "img":"jane.jpg"
+        "img":"jane.png"
     }
 ]
 var id=0;
