@@ -9,9 +9,9 @@ var user=[
 
     },
     {
-    "name":"Jane doe",
+    "name":"Manu",
         "gender":"Female",
-        "img":"jane.png"
+        "img":"WhatsApp Image 2026-07-18 at 12.28.35 PM.jpeg"
     }
 ]
 var id=0;
