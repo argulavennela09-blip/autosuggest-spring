@@ -3,9 +3,9 @@ console.log("hello from js")
 // 
 var user=[
     {
-        "name":"John doe",
-        "gender":"Male",
-        "img":"john.png"
+        "name":"Anu",
+        "gender":"Female",
+        "img":"WhatsApp Image 2026-07-18 at 12.16.15 PM.jpeg"
 
     },
     {
@@ -28,4 +28,29 @@ function toggleUser(){
     var userGender = document.getElementById("user-gender");
     userGender.innerHTML = user[id].gender;
 
+}
+function randomuser(){
+    fetch('https://randomuser.me/api/')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        var userData=data.results[0];
+    
+        var userImage = document.getElementById("user-image");
+    userImage.src = userData.picture.large;
+
+    
+    var userName = document.getElementById("user-name");
+    userName.innerHTML = userData.name.first+" "+userData.name.last;
+
+    var userGender = document.getElementById("user-gender");
+    userGender.innerHTML = userData.gender;
+
+
+    })
+ .catch(function(err){
+    console.log(err);
+ 
+ })
 }
