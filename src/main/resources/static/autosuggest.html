@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        text-align:center;
+      }  
+      .gear{
+        position:fixed;
+        top:20px;
+        left:20px;
+
+      }
+      .pill{
+        position: fixed;
+        top:20px;
+        right:20px;
+      }
+      .logo{
+        margin-top:60px;
+        
+      }
+      .logo-first{
+        color:blueviolet;
+      }
+      .phrase{
+        color:gray;
+      }
+      .search-bar{
+        padding-top:12px;
+        padding-right:15px;
+        padding-bottom:12px;
+        padding-left:30px;
+        border-radius: 20px;
+        width:30%;
+      }
+      .lens{
+        position:relative;
+        left:34px;
+      }
+
+        .search-suggestions {
+            width: 30%;
+            margin: 8px 0 0;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            text-align: left;
+            margin: 0px auto;
+        }
+        .suggestion {
+            padding: 10px 14px;
+            border-bottom: 1px solid #f2f2f2;
+            font-size: 14px;
+        }
+        
+      
+    
+      
+    </style>
+</head>
+<body>
+<span class="gear"> &#9881;</span>
+<span class="pill">&#x2022; online | &#x1F552; -ms </span>
+<h1 class="logo">
+    <span class="logo-first">Being</span>Infinity</h1>
+
+<p class="phrase">One million phrases.Four Algorithms. prefix based autosuggest.</p>
+<span class="lens"> &#128269;</span>
+<input class="search-bar" type="text" placeholder="start typing to search phrases..">
+<div class="search-suggestions">
+    <!-- <div class="suggestion">Cyber security</div>
+    <div class="suggestion">Artificial intelligence and data science</div>
+    <div class="suggestion">Data science</div> -->
+</div>
+<script>
+    function getSearchSuggestions()
+    {
+        var searchbar=document.getElementsByClassName("search-bar");
+        var search suggestions=document.getElementsByClassName("search-suggestions");
+        var userInput=searchbar.value()
+        if(userInput.trim()=="") return;
+        var URL1="https://autosuggest-backend.onrender.com/api/autosuggest?q=";
+        var URL3="ba&algorithm=brute&limit=10&weighted=false"
+        var URL1+ userInput +URL3
+        fetch(URL)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data)
+    {
+        var searchResults="";
+        var suggestions=data.results;
+        for(var i=0;i<data.count;i++)
+    {
+        searchResults+="<div class="suggestion">"+
+            suggestions[i].text+
+            "</div>";"
+    }
+            searchsuggestions.innerHTML=searchResults
+    })
+    }
+</script>
+</body>
+</html>
+<!--
+https://autosuggest-backend.onrender.com/api/autosuggest
+?q=ba&algorithm=brute&limit=10&weighted=false>

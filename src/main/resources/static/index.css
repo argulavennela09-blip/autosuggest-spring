@@ -1,6 +1,6 @@
 body{
     margin:0px;
-    background-color: rgb(100,105,108);
+    background-color: rgb(143, 204, 242);
 }
     h1{
     color:blue
@@ -8,7 +8,7 @@ body{
 
 .navbar{
     border-style:solid;
-    border-width:1px;
+    border-width:10px;
     border-color:rgb(236,228,228);
     padding:20px;
     text-align:center;
@@ -30,7 +30,7 @@ body{
     width: 350px;
     border radius:30px;
     text-align: center;
-    border: radius 30px;
+    border-radius: 30px;
     margin-top: 15px;
     margin: down 30px;
     overflow: hidden;
