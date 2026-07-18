@@ -29,7 +29,7 @@ function toggleUser(){
     userGender.innerHTML = user[id].gender;
 
 }
-function randomuser(){
+function randomUser(){
     fetch('https://randomuser.me/api/')
     .then(function(response){
         return response.json();
