@@ -3,13 +3,13 @@ console.log("hello from js")
 // 
 var user=[
     {
-        "name":"Anu",
+        "name":"Anu😍",
         "gender":"Female",
         "img":"WhatsApp Image 2026-07-18 at 12.16.15 PM.jpeg"
 
     },
     {
-    "name":"Manu",
+    "name":"Manu😎",
         "gender":"Female",
         "img":"WhatsApp Image 2026-07-18 at 12.28.35 PM.jpeg"
     }
